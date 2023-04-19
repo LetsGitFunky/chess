@@ -53,7 +53,6 @@ end
 # knights = [0][1]; [0][6]; [1][7]; [6][7]
 # bishops = [0][2]; [0][5], [2][7]; [5][7]
 
-b = Board.new
-b.move_piece([0,0],[3,0])
-b.print
- 
+# b = Board.new
+# b.move_piece([0,0],[3,0])
+# b.print

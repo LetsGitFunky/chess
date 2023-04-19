@@ -11,17 +11,27 @@ module Slideable
     end
 
     def moves
-        
-    end
-
-    private
-
-    # don't need move_dirs in module, just there for error handling
-    # def move_dirs
-    # end
-
-    # def grow_unblocked_in_dir(dx, dy)
-
+         moves = []
         #horizontal dirs .each, shovel that into a moves array until no longer valid
-    # end
+        move_dirs.each do |slide|
+            dx, dy = slide
+            moves << move_in_dir(dx, dy)
+        end
+         # might have to flatten in future,
+        moves
+    end
+    
+    private
+    def move_in_dir(dx, dy)
+        one_dir = []
+        base = self.pos
+        loop do
+            piece_x, piece_y = base
+            step = [(dx + piece_x), (dy + piece_y)]
+            break if !board.valid_pos?(step)
+            one_dir << step
+            base = step
+        end
+        one_dir
+    end
 end

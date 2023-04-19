@@ -6,7 +6,7 @@ class Null < Piece
     attr_reader :color, :symbol
 
     def initialize
-        @color = #"black" || "white"
+        @color = :Null
         @symbol = "🨠"
     end
     # symbol method? initialize? getter?

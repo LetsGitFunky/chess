@@ -3,7 +3,7 @@ module Slideable
     DIAGONAL_DIRS = [[-1,1],[1,1],[1,-1],[-1,-1]]
 
     def horizontal_dirs
-       return HORIZONTAL_DIRS
+       HORIZONTAL_DIRS
     end
 
     def diagonal_dirs
@@ -20,7 +20,7 @@ module Slideable
          # might have to flatten in future,
         moves
     end
-    
+
     private
     def move_in_dir(dx, dy)
         one_dir = []

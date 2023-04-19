@@ -1,11 +1,12 @@
 require_relative "stepable.rb"
-include Stepable
+require_relative "piece.rb"
 class King < Piece
+    include Stepable
 
     # symbol method? initialize? getter?
 
-    private
-    def move_dirs
-
+    # private
+    def move_diffs
+        self.king_dirs
     end
 end

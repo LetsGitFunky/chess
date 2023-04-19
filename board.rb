@@ -4,8 +4,8 @@ class Board
     attr_reader :rows
     def initialize
         @rows = Array.new(8) { Array.new(8) }
-        @rows[0][0] = Piece.new("TestPiece")
-        @rows[3][0] = Piece.new("SecondTestPiece")
+        # @rows[0][0] = Piece.new("TestPiece")
+        # @rows[3][0] = Piece.new("SecondTestPiece")
     end
 
     def [](pos)

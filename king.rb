@@ -1,3 +1,5 @@
+require_relative "stepable.rb"
+include Stepable
 class King < Piece
 
     # symbol method? initialize? getter?

@@ -7,11 +7,11 @@ module Slideable
     end
 
     def diagonal_dirs
-        DIAGONAL_DIRS 
+        DIAGONAL_DIRS
     end
 
     def moves
-
+        
     end
 
     private

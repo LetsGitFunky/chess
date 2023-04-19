@@ -1,4 +1,6 @@
+require_relative "slideable.rb"
 class Queen < Piece
+    include Slideable
 
     # symbol method? initialize? getter?
 

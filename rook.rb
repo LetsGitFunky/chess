@@ -4,7 +4,11 @@ require_relative "piece.rb"
 class Rook < Piece
     include Slideable
     # symbol method? initialize? getter?
-   
+
+    def symbol
+        "♖"
+    end
+
     private
     def move_dirs
         self.horizontal_dirs

@@ -3,6 +3,9 @@ class Queen < Piece
     include Slideable
 
     # symbol method? initialize? getter?
+    def symbol
+        "♕"
+    end
 
     private
     def move_dirs

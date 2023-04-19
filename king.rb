@@ -4,6 +4,9 @@ class King < Piece
     include Stepable
 
     # symbol method? initialize? getter?
+    def symbol
+        "♔"
+    end
 
     # private
     def move_diffs

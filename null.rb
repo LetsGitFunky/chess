@@ -2,10 +2,16 @@ require "singleton"
 
 class Null < Piece
     include Singleton
+
+    attr_reader :color, :symbol
+
+    def initialize
+        @color = #"black" || "white"
+        @symbol = "🨠"
+    end
     # symbol method? initialize? getter?
 
-    private
-    def move_dirs
+    def moves
 
     end
 end

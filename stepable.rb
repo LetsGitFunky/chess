@@ -21,10 +21,4 @@ module Stepable
         moves
     end
 
-
-    private
-
-    def move_diffs
-        KING_DIRS
-    end
 end

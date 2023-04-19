@@ -4,6 +4,6 @@ class Bishop < Piece
 
     private
     def move_dirs
-
+        
     end
 end

@@ -1,5 +1,5 @@
 require_relative "slideable.rb"
-# require_relative "piece.rb"
+require_relative "piece.rb"
 # require_relative "board.rb"
 class Rook < Piece
     include Slideable
@@ -8,6 +8,8 @@ class Rook < Piece
         moves = []
         #horizontal dirs .each, shovel that into a moves array until no longer valid
         move_dirs.each do |slide|
+            dx, dy = slide
+            moves << move_in_dir(dx, dy)
         end
         moves
     end
@@ -18,7 +20,6 @@ class Rook < Piece
         loop do
             piece_x, piece_y = base
             step = [(dx + piece_x), (dy + piece_y)]
-            p step
             break if !board.valid_pos?(step)
             one_dir << step
             base = step

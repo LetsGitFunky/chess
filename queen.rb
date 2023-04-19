@@ -6,6 +6,6 @@ class Queen < Piece
 
     private
     def move_dirs
-        #diagonal_dirs + horizontal_dirs (from module Slideable)
+       queen_dirs = self.diagonal_dirs.concat(self.horizontal_dirs)
     end
 end

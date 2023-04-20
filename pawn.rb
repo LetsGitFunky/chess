@@ -1,3 +1,5 @@
+require_relative "piece.rb"
+
 class Pawn < Piece
     attr_reader :first_move
     def initialize(color,board,pos)

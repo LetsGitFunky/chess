@@ -1,4 +1,5 @@
 require_relative "piece.rb"
+require_relative "null.rb"
 
 class Board
     attr_reader :rows
@@ -21,6 +22,13 @@ class Board
         @rows[0][5] = Bishop.new(:Black, self, [0,5])
         @rows[0][6] = Knight.new(:Black, self, [0,6])
         @rows[0][7] = Rook.new(:Black, self, [0,7])
+
+        @rows[2..5].each_with_index do |null_row, i|
+            null_row.each_with_index do |null_space, j|
+                # n = Null.new(:Null, self, [i+2,j])
+                @rows[i+2][j] = Null.instance
+            end
+        end
 
         @rows[7][0] = Rook.new(:White, self, [7,0])
         @rows[7][1] = Knight.new(:White, self, [7,1])
@@ -45,11 +53,13 @@ class Board
     def print
         print_arr = []
         @rows.each do |r|
+            row_arr = []
             r.each do |space|
-                print_arr << space.symbol if !space.nil?
+                row_arr << space.symbol if !space.nil?
             end
+            print_arr << row_arr.join(" ")
         end
-        puts print_arr.join(" ")
+        puts print_arr.join("\n")
     end
 
     def move_piece(start_pos, end_pos)
